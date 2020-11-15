@@ -9,7 +9,6 @@ This Demo System is working on Ubuntu
 If you are a novice of WireGuard, you should have use wg-quick.
 
 But it's not working for peer to peer IP Address.
-
 So, we need to use ```ip addr``` and ```ip link``` command to set
 
 For example, if A is 10.121.211.254, B is 10.121.212.254
