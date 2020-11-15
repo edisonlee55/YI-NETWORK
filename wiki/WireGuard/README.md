@@ -45,3 +45,35 @@ AllowedIPs = 0.0.0.0/0, ::/0
 EndPoint = <EndPoint>
 PersistentKeepalive = 10
 ```
+
+## using wg-quick to make tunnel
+
+If you want to use ```wg-quick up xxx``` to make a tunnel, yeah! It can work.
+
+But it still not work in the peer to peer IP Address.
+
+So we need make a config of WireGuard.
+
+And it look like this
+
+```
+[Interface]
+PrivateKey = <PrivateKey>
+Address = <suggestion using /31 and /127>
+TABLE = OFF
+
+# Server
+[Peer]
+PublicKey = <PublicKey>
+Endpoint = <Endpoint>
+AllowedIPs = 0.0.0.0/0, ::/0
+PersistentKeepalive = 10
+```
+
+And use ```wg-quick up <your_config_name>```, it will be work!
+
+Q: Why i set AllowedIPs be 0.0.0.0/0 and ::/0, it didn't write to kernal?
+
+A: Because we using ```TABLE```, so WireGuard will not write route to kernal, it just write to routing table.
+
+So it will not cover original routing.
