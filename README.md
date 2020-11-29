@@ -18,4 +18,4 @@ For more in details, Please send email to peering_at_steveyi.net
 
 We mainter [AS209557](https://bgp.he.net/AS209557/) and [AS141173](https://bgp.he.net/AS141173/)
 
-You check it from [PeeringDB](https://www.peeringdb.com/org/25047)
+You can check it from [PeeringDB](https://www.peeringdb.com/org/25047)
